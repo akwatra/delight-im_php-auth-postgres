@@ -143,7 +143,7 @@ ALTER TABLE users_resets_seq OWNER TO postgres;
 
 CREATE TABLE users_resets (
     id integer DEFAULT nextval('users_resets_seq'::regclass) NOT NULL,
-    user_id integer NOT NULL,
+    user integer NOT NULL,
     selector character varying(20) NOT NULL,
     token character varying(255) NOT NULL,
     expires integer NOT NULL,
